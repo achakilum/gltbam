@@ -1,10 +1,12 @@
 # GL Texture Buddy Allocation Manager
 
-This is a small library designed to manage texture memory using the buddy allocation technique.  Given the file paths to a set of image files, you may allocate those images, retrieve their rendering info such as their texture coordinates and designated texture sampler, e then free those images using single function calls.
+This is a small library designed to manage texture memory using the buddy allocation technique.  Given the file paths to a set of image files, you may allocate those images, retrieve their rendering info such as their texture coordinates and designated texture sampler, then free those images using single function calls.  Because this library uses the buddy allocation technique, you may expect reduced fragmentation of the texture memory space.
+
+This library requires that you have the GLEW and GLFW frameworks installed on your Linux machine.
 
 ##### Instructions
 
-1. Copy `gltbam.cpp`, `gltbam.h`, and `stb/stb_image.h` into your project and include them in the compilation/linking process.
+1. Copy `gltbam.cpp`, `gltbam.h`, and `stb/stb_image.h` into your project and include them in the compilation/linking process (`Makefile` shows an example of how to include the files).
 
 2. Initialize and deinitalize GLTBAM using `gltbam::init()` and `gltbam::deinit()` respectively.
 
